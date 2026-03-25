@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import rawData from './data/questions.json';
+import rawDataPL from './data/questions_pl.json';
 import temarioRaw from './data/temario_pn.json';
 import temarioLocalRaw from './data/temario_pl.json';
 
@@ -36,6 +37,7 @@ type OppProfile = 'pn' | 'pl';
 
 const STORE_KEY = 'opo-test:v1';
 const questions = rawData.questions as Question[];
+const questionsPL = rawDataPL.questions as Question[];
 const bloquesPN = (temarioRaw.bloques ?? []) as Bloque[];
 const bloquesPL = (temarioLocalRaw.bloques ?? []) as Bloque[];
 
@@ -64,7 +66,7 @@ export default function App() {
   const bloques = profile === 'pn' ? bloquesPN : bloquesPL;
   const temas = useMemo(() => bloques.flatMap((b) => b.temas), [bloques]);
 
-  const activeQuestions = profile === 'pn' ? questions : [];
+  const activeQuestions = profile === 'pn' ? questions : questionsPL;
 
   const temaTitle = (temaId?: string, fallback?: string) => {
     const t = temas.find((x) => x.id === temaId);
@@ -168,10 +170,10 @@ export default function App() {
       {screen === 'profile' && (
         <View style={styles.container}>
           <Text style={styles.title}>Selecciona oposición</Text>
-          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pn'); setScreen('home'); }}>
+          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pn'); setStarted(false); setScreen('home'); }}>
             <Text style={styles.btnText}>Policía Nacional</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pl'); setScreen('home'); }}>
+          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pl'); setStarted(false); setScreen('home'); }}>
             <Text style={styles.btnText}>Policía Local</Text>
           </TouchableOpacity>
           <Text style={styles.sub}>Puedes cambiarla luego desde Inicio.</Text>
@@ -184,7 +186,7 @@ export default function App() {
             <View style={styles.hero}>
               <Text style={styles.logoEmoji}>👮‍♂️</Text>
               <Text style={styles.title}>OpoTest Policía</Text>
-              <Text style={styles.sub}>Policía Nacional · Entrenamiento tipo test</Text>
+              <Text style={styles.sub}>{profile === 'pn' ? 'Policía Nacional' : 'Policía Local'} · Entrenamiento tipo test</Text>
               <TouchableOpacity style={styles.btn} onPress={() => setStarted(true)}>
                 <Text style={styles.btnText}>Empezar</Text>
               </TouchableOpacity>
