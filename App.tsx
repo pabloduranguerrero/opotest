@@ -49,6 +49,7 @@ export default function App() {
   const [showFeedback, setShowFeedback] = useState(false);
   const [lastCorrect, setLastCorrect] = useState(false);
   const [stats, setStats] = useState<StatsMap>({});
+  const [started, setStarted] = useState(false);
 
   const temas = useMemo(() => Array.from(new Set(questions.map((q) => q.tema))).sort(), []);
 
@@ -148,36 +149,49 @@ export default function App() {
 
       {screen === 'home' && (
         <ScrollView contentContainerStyle={styles.container}>
-          <Text style={styles.title}>OpoTest Policía</Text>
-          <Text style={styles.sub}>Entrena como academia: rápido, serio y enfocado en fallos.</Text>
+          {!started ? (
+            <View style={styles.hero}>
+              <Text style={styles.logoEmoji}>👮‍♂️</Text>
+              <Text style={styles.title}>OpoTest Policía</Text>
+              <Text style={styles.sub}>Policía Nacional · Entrenamiento tipo test</Text>
+              <TouchableOpacity style={styles.btn} onPress={() => setStarted(true)}>
+                <Text style={styles.btnText}>Empezar</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <>
+              <Text style={styles.title}>OpoTest Policía</Text>
+              <Text style={styles.sub}>Entrena como academia: rápido, serio y enfocado en fallos.</Text>
 
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>Resumen</Text>
-            <Text style={styles.text}>Preguntas respondidas: {totalAnswered}</Text>
-            <Text style={styles.text}>Acierto global: {globalRate}%</Text>
-          </View>
+              <View style={styles.card}>
+                <Text style={styles.cardTitle}>Resumen</Text>
+                <Text style={styles.text}>Preguntas respondidas: {totalAnswered}</Text>
+                <Text style={styles.text}>Acierto global: {globalRate}%</Text>
+              </View>
 
-          <TouchableOpacity style={styles.btn} onPress={() => setScreen('tema')}>
-            <Text style={styles.btnText}>Test por tema</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.btn} onPress={() => setScreen('tema')}>
+                <Text style={styles.btnText}>Test por tema</Text>
+              </TouchableOpacity>
 
-          <TouchableOpacity style={styles.btn} onPress={() => startTest('aleatorio')}>
-            <Text style={styles.btnText}>Test aleatorio (20)</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.btn} onPress={() => startTest('aleatorio')}>
+                <Text style={styles.btnText}>Test aleatorio (20)</Text>
+              </TouchableOpacity>
 
-          <TouchableOpacity style={styles.btn} onPress={() => startTest('simulacro')}>
-            <Text style={styles.btnText}>Simulacro examen (50)</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.btn} onPress={() => startTest('simulacro')}>
+                <Text style={styles.btnText}>Simulacro examen (50)</Text>
+              </TouchableOpacity>
 
-          <TouchableOpacity style={styles.btn} onPress={() => startTest('repaso')}>
-            <Text style={styles.btnText}>Repaso inteligente (falladas)</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.btn} onPress={() => startTest('repaso')}>
+                <Text style={styles.btnText}>Repaso inteligente (falladas)</Text>
+              </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('stats')}>
-            <Text style={styles.secondaryBtnText}>Ver estadísticas</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('stats')}>
+                <Text style={styles.secondaryBtnText}>Ver estadísticas</Text>
+              </TouchableOpacity>
 
-          <View style={styles.banner}><Text style={styles.bannerText}>Banner anuncio (simulado)</Text></View>
+              <View style={styles.banner}><Text style={styles.bannerText}>Banner anuncio (simulado)</Text></View>
+            </>
+          )}
         </ScrollView>
       )}
 
@@ -266,7 +280,9 @@ export default function App() {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: '#0E1117' },
   container: { padding: 16, gap: 10 },
-  title: { color: '#fff', fontSize: 30, fontWeight: '800' },
+  hero: { minHeight: 420, justifyContent: 'center', alignItems: 'center', gap: 12 },
+  logoEmoji: { fontSize: 72 },
+  title: { color: '#fff', fontSize: 30, fontWeight: '800', textAlign: 'center' },
   sub: { color: '#9FB0CB' },
   card: { backgroundColor: '#171C26', borderRadius: 14, borderWidth: 1, borderColor: '#283247', padding: 12 },
   cardTitle: { color: '#E6EBF7', fontWeight: '800', marginBottom: 6 },
