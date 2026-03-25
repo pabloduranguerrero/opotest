@@ -7,6 +7,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -32,10 +33,11 @@ type QuestionStat = { answered: number; correct: number; wrong: number };
 type StatsMap = Record<string, QuestionStat>;
 
 type Mode = 'tema' | 'aleatorio' | 'simulacro' | 'repaso' | 'mas_falladas' | 'pendientes';
-type Screen = 'profile' | 'home' | 'tema' | 'test' | 'result' | 'stats';
+type Screen = 'profile' | 'home' | 'tema' | 'test' | 'result' | 'stats' | 'account';
 type OppProfile = 'pn' | 'pl';
+type UserAccount = { name: string; email: string };
 
-const STORE_KEY = 'opo-test:v1';
+const STORE_KEY = 'opo-test:v2';
 const questions = rawData.questions as Question[];
 const questionsPL = rawDataPL.questions as Question[];
 const bloquesPN = (temarioRaw.bloques ?? []) as Bloque[];
@@ -76,6 +78,7 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [sessionAnswers, setSessionAnswers] = useState<Record<string, number>>({});
   const [stats, setStats] = useState<StatsMap>({});
+  const [account, setAccount] = useState<UserAccount>({ name: '', email: '' });
   const [started, setStarted] = useState(false);
 
   const bloques = profile === 'pn' ? bloquesPN : bloquesPL;
@@ -92,16 +95,26 @@ export default function App() {
     (async () => {
       try {
         const raw = await AsyncStorage.getItem(STORE_KEY);
-        if (raw) setStats(JSON.parse(raw) as StatsMap);
+        if (!raw) return;
+        const parsed = JSON.parse(raw) as { stats?: StatsMap; account?: UserAccount } | StatsMap;
+
+        // Compatibilidad con versión antigua (solo stats)
+        if ('stats' in parsed || 'account' in parsed) {
+          setStats((parsed as any).stats ?? {});
+          setAccount((parsed as any).account ?? { name: '', email: '' });
+        } else {
+          setStats(parsed as StatsMap);
+        }
       } catch {
         setStats({});
       }
     })();
   }, []);
 
-  const persistStats = async (next: StatsMap) => {
-    setStats(next);
-    await AsyncStorage.setItem(STORE_KEY, JSON.stringify(next));
+  const persistAll = async (nextStats: StatsMap, nextAccount: UserAccount = account) => {
+    setStats(nextStats);
+    setAccount(nextAccount);
+    await AsyncStorage.setItem(STORE_KEY, JSON.stringify({ stats: nextStats, account: nextAccount }));
   };
 
   const startTest = (m: Mode, temaId?: string) => {
@@ -189,7 +202,7 @@ export default function App() {
     }
 
     setScore(localScore);
-    await persistStats(updated);
+    await persistAll(updated);
     setScreen('result');
   };
 
@@ -251,6 +264,15 @@ export default function App() {
               <Text style={styles.sub}>Entrena como academia: rápido, serio y enfocado en fallos.</Text>
 
               <View style={styles.card}>
+                <Text style={styles.cardTitle}>Perfil de estudio</Text>
+                <Text style={styles.text}>Nombre: {account.name || 'Sin configurar'}</Text>
+                <Text style={styles.text}>Email: {account.email || 'Sin configurar'}</Text>
+                <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('account')}>
+                  <Text style={styles.secondaryBtnText}>Editar perfil</Text>
+                </TouchableOpacity>
+              </View>
+
+              <View style={styles.card}>
                 <Text style={styles.cardTitle}>Resumen</Text>
                 <Text style={styles.text}>Respondidas: {totalAnswered}</Text>
                 <Text style={styles.text}>Aciertos: {totalCorrect}</Text>
@@ -294,6 +316,13 @@ export default function App() {
                 <Text style={styles.secondaryBtnText}>Ver estadísticas</Text>
               </TouchableOpacity>
 
+              <View style={styles.card}>
+                <Text style={styles.cardTitle}>Monetización</Text>
+                <Text style={styles.text}>Banner activo en inicio (simulado).</Text>
+                <Text style={styles.text}>Interstitial al finalizar test (simulado).</Text>
+                <Text style={styles.sub}>Preparado para integrar AdMob real en siguiente fase.</Text>
+              </View>
+
               <View style={styles.banner}><Text style={styles.bannerText}>Banner anuncio (simulado)</Text></View>
             </>
           )}
@@ -320,6 +349,40 @@ export default function App() {
             <Text style={styles.secondaryBtnText}>Volver</Text>
           </TouchableOpacity>
         </ScrollView>
+      )}
+
+      {screen === 'account' && (
+        <View style={styles.container}>
+          <Text style={styles.title}>Tu perfil</Text>
+          <TextInput
+            placeholder="Nombre"
+            placeholderTextColor="#7aa5c4"
+            value={account.name}
+            onChangeText={(v) => setAccount((a) => ({ ...a, name: v }))}
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Email"
+            placeholderTextColor="#7aa5c4"
+            value={account.email}
+            onChangeText={(v) => setAccount((a) => ({ ...a, email: v }))}
+            style={styles.input}
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={async () => {
+              await persistAll(stats, account);
+              setScreen('home');
+            }}
+          >
+            <Text style={styles.btnText}>Guardar perfil</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('home')}>
+            <Text style={styles.secondaryBtnText}>Volver</Text>
+          </TouchableOpacity>
+        </View>
       )}
 
       {screen === 'test' && testQuestions[index] && (
@@ -440,6 +503,7 @@ const styles = StyleSheet.create({
   banner: { marginTop: 6, height: 50, borderRadius: 10, borderWidth: 1, borderColor: '#A8D9F5', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F4FBFF' },
   bannerText: { color: '#3E6E90', fontWeight: '700' },
   question: { color: '#0B3658', fontSize: 21, fontWeight: '700', marginVertical: 6 },
+  input: { backgroundColor: '#FFFFFF', borderRadius: 12, borderWidth: 1, borderColor: '#BFE4FA', padding: 12, color: '#123F61' },
   option: { backgroundColor: '#FFFFFF', borderRadius: 12, borderWidth: 1, borderColor: '#BFE4FA', padding: 12 },
   optionSelected: { borderColor: '#2D8FE6', backgroundColor: '#DFF1FF' },
   optionText: { color: '#123F61' },
