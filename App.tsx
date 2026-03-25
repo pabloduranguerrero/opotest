@@ -31,7 +31,7 @@ type Bloque = { id: string; nombre: string; temas: Tema[] };
 type QuestionStat = { answered: number; correct: number; wrong: number };
 type StatsMap = Record<string, QuestionStat>;
 
-type Mode = 'tema' | 'aleatorio' | 'simulacro' | 'repaso';
+type Mode = 'tema' | 'aleatorio' | 'simulacro' | 'repaso' | 'mas_falladas' | 'pendientes';
 type Screen = 'profile' | 'home' | 'tema' | 'test' | 'result' | 'stats';
 type OppProfile = 'pn' | 'pl';
 
@@ -104,6 +104,30 @@ export default function App() {
       }
     }
 
+    if (m === 'mas_falladas') {
+      const ranked = [...activeQuestions]
+        .map((q) => ({ q, wrong: stats[q.id]?.wrong ?? 0 }))
+        .filter((x) => x.wrong > 0)
+        .sort((a, b) => b.wrong - a.wrong)
+        .slice(0, 40)
+        .map((x) => x.q);
+
+      q = ranked;
+      if (!q.length) {
+        Alert.alert('Más falladas', 'Aún no hay preguntas falladas suficientes.');
+        return;
+      }
+    }
+
+    if (m === 'pendientes') {
+      const pending = activeQuestions.filter((q) => (stats[q.id]?.answered ?? 0) === 0);
+      q = shuffle(pending).slice(0, 40);
+      if (!q.length) {
+        Alert.alert('Pendientes', 'Ya has respondido todas las preguntas cargadas.');
+        return;
+      }
+    }
+
     if (!q.length) {
       Alert.alert('Sin preguntas', 'No hay preguntas para este modo.');
       return;
@@ -148,6 +172,8 @@ export default function App() {
 
   const totalAnswered = Object.values(stats).reduce((a, s) => a + s.answered, 0);
   const totalCorrect = Object.values(stats).reduce((a, s) => a + s.correct, 0);
+  const totalWrong = Object.values(stats).reduce((a, s) => a + s.wrong, 0);
+  const totalNotAnswered = Math.max(activeQuestions.length - Object.keys(stats).filter((id) => (stats[id]?.answered ?? 0) > 0).length, 0);
   const globalRate = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
   const worstQuestions = [...activeQuestions]
@@ -203,7 +229,10 @@ export default function App() {
 
               <View style={styles.card}>
                 <Text style={styles.cardTitle}>Resumen</Text>
-                <Text style={styles.text}>Preguntas respondidas: {totalAnswered}</Text>
+                <Text style={styles.text}>Respondidas: {totalAnswered}</Text>
+                <Text style={styles.text}>Aciertos: {totalCorrect}</Text>
+                <Text style={styles.text}>Fallos: {totalWrong}</Text>
+                <Text style={styles.text}>Pendientes: {totalNotAnswered}</Text>
                 <Text style={styles.text}>Acierto global: {globalRate}%</Text>
               </View>
 
@@ -228,6 +257,14 @@ export default function App() {
 
               <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('repaso')}>
                 <Text style={styles.btnText}>Repaso inteligente (falladas)</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('mas_falladas')}>
+                <Text style={styles.btnText}>Test de preguntas más falladas</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('pendientes')}>
+                <Text style={styles.btnText}>Test de preguntas pendientes</Text>
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('stats')}>
@@ -305,6 +342,9 @@ export default function App() {
         <ScrollView contentContainerStyle={styles.container}>
           <Text style={styles.title}>Estadísticas</Text>
           <Text style={styles.text}>Respondidas: {totalAnswered}</Text>
+          <Text style={styles.text}>Aciertos: {totalCorrect}</Text>
+          <Text style={styles.text}>Fallos: {totalWrong}</Text>
+          <Text style={styles.text}>Pendientes: {totalNotAnswered}</Text>
           <Text style={styles.text}>Acierto global: {globalRate}%</Text>
 
           <View style={styles.card}>
