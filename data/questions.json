@@ -4,161 +4,281 @@
       "id": "q1",
       "tema": "Constitución",
       "enunciado": "Según la Constitución Española, la soberanía nacional reside en:",
-      "opciones": ["El Gobierno", "El Rey", "El pueblo español", "Las Cortes Generales"],
+      "opciones": [
+        "El Gobierno",
+        "El Rey",
+        "El pueblo español",
+        "Las Cortes Generales"
+      ],
       "correcta": 2,
-      "explicacion": "El artículo 1.2 CE establece que la soberanía nacional reside en el pueblo español."
+      "explicacion": "El artículo 1.2 CE establece que la soberanía nacional reside en el pueblo español.",
+      "temaId": "T2"
     },
     {
       "id": "q2",
       "tema": "Constitución",
       "enunciado": "La forma política del Estado español es:",
-      "opciones": ["República federal", "Monarquía parlamentaria", "Monarquía absoluta", "Estado confederal"],
+      "opciones": [
+        "República federal",
+        "Monarquía parlamentaria",
+        "Monarquía absoluta",
+        "Estado confederal"
+      ],
       "correcta": 1,
-      "explicacion": "Artículo 1.3 CE: la forma política del Estado español es la Monarquía parlamentaria."
+      "explicacion": "Artículo 1.3 CE: la forma política del Estado español es la Monarquía parlamentaria.",
+      "temaId": "T3"
     },
     {
       "id": "q3",
       "tema": "Derecho Penal",
       "enunciado": "El principio de legalidad penal implica que:",
-      "opciones": ["Todo lo injusto es delito", "No hay delito sin ley previa", "La policía define delitos", "Los jueces crean delitos"],
+      "opciones": [
+        "Todo lo injusto es delito",
+        "No hay delito sin ley previa",
+        "La policía define delitos",
+        "Los jueces crean delitos"
+      ],
       "correcta": 1,
-      "explicacion": "No existe delito ni pena sin una ley previa que lo tipifique."
+      "explicacion": "No existe delito ni pena sin una ley previa que lo tipifique.",
+      "temaId": "T16"
     },
     {
       "id": "q4",
       "tema": "Derecho Penal",
       "enunciado": "La tentativa se produce cuando:",
-      "opciones": ["No hay intención", "El delito se consuma", "Se inicia la ejecución pero no se consuma", "Solo hay preparación"],
+      "opciones": [
+        "No hay intención",
+        "El delito se consuma",
+        "Se inicia la ejecución pero no se consuma",
+        "Solo hay preparación"
+      ],
       "correcta": 2,
-      "explicacion": "La tentativa exige inicio de ejecución y no consumación por causas ajenas al autor."
+      "explicacion": "La tentativa exige inicio de ejecución y no consumación por causas ajenas al autor.",
+      "temaId": "T17"
     },
     {
       "id": "q5",
       "tema": "Derecho Administrativo",
       "enunciado": "El silencio administrativo, con carácter general en procedimientos iniciados a solicitud del interesado, es:",
-      "opciones": ["Siempre negativo", "Siempre positivo", "Positivo salvo excepciones legales", "Inexistente"],
+      "opciones": [
+        "Siempre negativo",
+        "Siempre positivo",
+        "Positivo salvo excepciones legales",
+        "Inexistente"
+      ],
       "correcta": 2,
-      "explicacion": "La regla general es silencio positivo, salvo excepciones previstas legalmente."
+      "explicacion": "La regla general es silencio positivo, salvo excepciones previstas legalmente.",
+      "temaId": "T5"
     },
     {
       "id": "q6",
       "tema": "Derecho Administrativo",
       "enunciado": "La potestad sancionadora de la Administración debe respetar, entre otros, el principio de:",
-      "opciones": ["Oportunidad política", "Legalidad y tipicidad", "Arbitrariedad", "Libre apreciación absoluta"],
+      "opciones": [
+        "Oportunidad política",
+        "Legalidad y tipicidad",
+        "Arbitrariedad",
+        "Libre apreciación absoluta"
+      ],
       "correcta": 1,
-      "explicacion": "La sanción administrativa requiere base legal y tipificación previa."
+      "explicacion": "La sanción administrativa requiere base legal y tipificación previa.",
+      "temaId": "T6"
     },
     {
       "id": "q7",
       "tema": "Seguridad Ciudadana",
       "enunciado": "La finalidad principal de la seguridad ciudadana es:",
-      "opciones": ["Recaudar sanciones", "Garantizar convivencia y derechos", "Sustituir a jueces", "Limitar libertades"],
+      "opciones": [
+        "Recaudar sanciones",
+        "Garantizar convivencia y derechos",
+        "Sustituir a jueces",
+        "Limitar libertades"
+      ],
       "correcta": 1,
-      "explicacion": "Busca proteger el libre ejercicio de derechos y la convivencia pacífica."
+      "explicacion": "Busca proteger el libre ejercicio de derechos y la convivencia pacífica.",
+      "temaId": "T14"
     },
     {
       "id": "q8",
       "tema": "Seguridad Ciudadana",
       "enunciado": "En un cacheo superficial en vía pública, debe prevalecer:",
-      "opciones": ["Discrecionalidad total", "Proporcionalidad y respeto a la dignidad", "Publicidad del acto", "Ausencia de motivo"],
+      "opciones": [
+        "Discrecionalidad total",
+        "Proporcionalidad y respeto a la dignidad",
+        "Publicidad del acto",
+        "Ausencia de motivo"
+      ],
       "correcta": 1,
-      "explicacion": "Toda actuación policial debe ser proporcional, necesaria y respetuosa."
+      "explicacion": "Toda actuación policial debe ser proporcional, necesaria y respetuosa.",
+      "temaId": "T15"
     },
     {
       "id": "q9",
       "tema": "Policía Nacional",
       "enunciado": "La Policía Nacional depende orgánicamente de:",
-      "opciones": ["Ministerio de Justicia", "Ministerio del Interior", "Ministerio de Defensa", "Congreso"],
+      "opciones": [
+        "Ministerio de Justicia",
+        "Ministerio del Interior",
+        "Ministerio de Defensa",
+        "Congreso"
+      ],
       "correcta": 1,
-      "explicacion": "Depende del Ministerio del Interior."
+      "explicacion": "Depende del Ministerio del Interior.",
+      "temaId": "T8"
     },
     {
       "id": "q10",
       "tema": "Policía Nacional",
       "enunciado": "Una función básica de Policía Judicial es:",
-      "opciones": ["Aprobar leyes", "Investigar delitos y asegurar pruebas", "Imponer penas", "Conceder indultos"],
+      "opciones": [
+        "Aprobar leyes",
+        "Investigar delitos y asegurar pruebas",
+        "Imponer penas",
+        "Conceder indultos"
+      ],
       "correcta": 1,
-      "explicacion": "Actúa en investigación de delitos bajo dirección judicial/fiscal."
+      "explicacion": "Actúa en investigación de delitos bajo dirección judicial/fiscal.",
+      "temaId": "T21"
     },
     {
       "id": "q11",
       "tema": "Policía Local",
       "enunciado": "La Policía Local actúa principalmente en:",
-      "opciones": ["Ámbito internacional", "Término municipal", "Todo el territorio nacional", "Solo carreteras estatales"],
+      "opciones": [
+        "Ámbito internacional",
+        "Término municipal",
+        "Todo el territorio nacional",
+        "Solo carreteras estatales"
+      ],
       "correcta": 1,
-      "explicacion": "Su ámbito natural de actuación es el municipio."
+      "explicacion": "Su ámbito natural de actuación es el municipio.",
+      "temaId": "T43"
     },
     {
       "id": "q12",
       "tema": "Policía Local",
       "enunciado": "Entre las funciones de Policía Local se encuentra:",
-      "opciones": ["Controlar fronteras", "Ordenar y señalizar tráfico urbano", "Dirigir Fuerzas Armadas", "Emitir sentencias"],
+      "opciones": [
+        "Controlar fronteras",
+        "Ordenar y señalizar tráfico urbano",
+        "Dirigir Fuerzas Armadas",
+        "Emitir sentencias"
+      ],
       "correcta": 1,
-      "explicacion": "Una función clásica es la regulación del tráfico en casco urbano."
+      "explicacion": "Una función clásica es la regulación del tráfico en casco urbano.",
+      "temaId": "T9"
     },
     {
       "id": "q13",
       "tema": "Constitución",
       "enunciado": "El derecho fundamental a la libertad ideológica se reconoce en:",
-      "opciones": ["Artículo 14", "Artículo 16", "Artículo 24", "Artículo 27"],
+      "opciones": [
+        "Artículo 14",
+        "Artículo 16",
+        "Artículo 24",
+        "Artículo 27"
+      ],
       "correcta": 1,
-      "explicacion": "Artículo 16 CE."
+      "explicacion": "Artículo 16 CE.",
+      "temaId": "T16"
     },
     {
       "id": "q14",
       "tema": "Constitución",
       "enunciado": "La igualdad ante la ley se recoge en el artículo:",
-      "opciones": ["10", "14", "18", "30"],
+      "opciones": [
+        "10",
+        "14",
+        "18",
+        "30"
+      ],
       "correcta": 1,
-      "explicacion": "Artículo 14 CE."
+      "explicacion": "Artículo 14 CE.",
+      "temaId": "T14"
     },
     {
       "id": "q15",
       "tema": "Derecho Penal",
       "enunciado": "Se considera agravante:",
-      "opciones": ["Actuar por imprudencia leve", "Reincidencia", "Error invencible", "Miedo insuperable"],
+      "opciones": [
+        "Actuar por imprudencia leve",
+        "Reincidencia",
+        "Error invencible",
+        "Miedo insuperable"
+      ],
       "correcta": 1,
-      "explicacion": "La reincidencia es una circunstancia agravante."
+      "explicacion": "La reincidencia es una circunstancia agravante.",
+      "temaId": "T18"
     },
     {
       "id": "q16",
       "tema": "Derecho Administrativo",
       "enunciado": "Los actos administrativos deben ser, con carácter general:",
-      "opciones": ["Verbales y secretos", "Motivados cuando lo exija la ley", "Inapelables", "Sin notificación"],
+      "opciones": [
+        "Verbales y secretos",
+        "Motivados cuando lo exija la ley",
+        "Inapelables",
+        "Sin notificación"
+      ],
       "correcta": 1,
-      "explicacion": "La motivación es exigible en múltiples supuestos y mejora garantía jurídica."
+      "explicacion": "La motivación es exigible en múltiples supuestos y mejora garantía jurídica.",
+      "temaId": "T25"
     },
     {
       "id": "q17",
       "tema": "Seguridad Ciudadana",
       "enunciado": "El uso de la fuerza policial debe regirse por:",
-      "opciones": ["Proporcionalidad, necesidad y congruencia", "Arbitrariedad", "Interés personal", "Exclusiva rapidez"],
+      "opciones": [
+        "Proporcionalidad, necesidad y congruencia",
+        "Arbitrariedad",
+        "Interés personal",
+        "Exclusiva rapidez"
+      ],
       "correcta": 0,
-      "explicacion": "Principios clásicos de actuación policial en uso de la fuerza."
+      "explicacion": "Principios clásicos de actuación policial en uso de la fuerza.",
+      "temaId": "T14"
     },
     {
       "id": "q18",
       "tema": "Policía Nacional",
       "enunciado": "En una detención, el detenido debe ser informado de:",
-      "opciones": ["Solo la sanción económica", "Sus derechos y motivos de detención", "Solo su obligación de declarar", "Nada hasta juicio"],
+      "opciones": [
+        "Solo la sanción económica",
+        "Sus derechos y motivos de detención",
+        "Solo su obligación de declarar",
+        "Nada hasta juicio"
+      ],
       "correcta": 1,
-      "explicacion": "Debe informarse de forma inmediata y comprensible de derechos y motivos."
+      "explicacion": "Debe informarse de forma inmediata y comprensible de derechos y motivos.",
+      "temaId": "T21"
     },
     {
       "id": "q19",
       "tema": "Policía Local",
       "enunciado": "La colaboración con Protección Civil por parte de Policía Local es:",
-      "opciones": ["Ajena a sus funciones", "Habitual en emergencias municipales", "Ilegal", "Competencia estatal exclusiva"],
+      "opciones": [
+        "Ajena a sus funciones",
+        "Habitual en emergencias municipales",
+        "Ilegal",
+        "Competencia estatal exclusiva"
+      ],
       "correcta": 1,
-      "explicacion": "Colaboran en emergencias y planes municipales."
+      "explicacion": "Colaboran en emergencias y planes municipales.",
+      "temaId": "T33"
     },
     {
       "id": "q20",
       "tema": "Simulacro",
       "enunciado": "En un examen tipo test, una estrategia de alto rendimiento suele ser:",
-      "opciones": ["Responder sin leer", "Repasar errores frecuentes y repetirlos", "Memorizar solo una ley", "Evitar simulacros"],
+      "opciones": [
+        "Responder sin leer",
+        "Repasar errores frecuentes y repetirlos",
+        "Memorizar solo una ley",
+        "Evitar simulacros"
+      ],
       "correcta": 1,
-      "explicacion": "El aprendizaje basado en errores y repetición espaciada mejora resultados."
+      "explicacion": "El aprendizaje basado en errores y repetición espaciada mejora resultados.",
+      "temaId": "T45"
     }
   ]
 }

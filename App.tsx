@@ -11,15 +11,20 @@ import {
   View,
 } from 'react-native';
 import rawData from './data/questions.json';
+import temarioRaw from './data/temario_pn.json';
 
 type Question = {
   id: string;
   tema: string;
+  temaId?: string;
   enunciado: string;
   opciones: string[];
   correcta: number;
   explicacion: string;
 };
+
+type Tema = { id: string; numero: number; titulo: string };
+type Bloque = { id: string; nombre: string; temas: Tema[] };
 
 type QuestionStat = { answered: number; correct: number; wrong: number };
 type StatsMap = Record<string, QuestionStat>;
@@ -29,6 +34,8 @@ type Screen = 'home' | 'tema' | 'test' | 'result' | 'stats';
 
 const STORE_KEY = 'opo-test:v1';
 const questions = rawData.questions as Question[];
+const bloques = (temarioRaw.bloques ?? []) as Bloque[];
+const temarioTemas = bloques.flatMap((b) => b.temas);
 
 function shuffle<T>(arr: T[]) {
   const copy = [...arr];
@@ -42,7 +49,7 @@ function shuffle<T>(arr: T[]) {
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
   const [mode, setMode] = useState<Mode>('aleatorio');
-  const [selectedTema, setSelectedTema] = useState<string>('');
+  const [selectedTemaId, setSelectedTemaId] = useState<string>('');
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -51,7 +58,12 @@ export default function App() {
   const [stats, setStats] = useState<StatsMap>({});
   const [started, setStarted] = useState(false);
 
-  const temas = useMemo(() => Array.from(new Set(questions.map((q) => q.tema))).sort(), []);
+  const temas = useMemo(() => temarioTemas, []);
+
+  const temaTitle = (temaId?: string, fallback?: string) => {
+    const t = temas.find((x) => x.id === temaId);
+    return t ? `Tema ${t.numero}. ${t.titulo}` : (fallback ?? 'Tema');
+  };
 
   useEffect(() => {
     (async () => {
@@ -69,10 +81,10 @@ export default function App() {
     await AsyncStorage.setItem(STORE_KEY, JSON.stringify(next));
   };
 
-  const startTest = (m: Mode, tema?: string) => {
+  const startTest = (m: Mode, temaId?: string) => {
     let q: Question[] = [];
 
-    if (m === 'tema') q = questions.filter((x) => x.tema === tema);
+    if (m === 'tema') q = questions.filter((x) => x.temaId === temaId);
     if (m === 'aleatorio') q = shuffle(questions).slice(0, 20);
     if (m === 'simulacro') q = shuffle(questions).slice(0, 50);
     if (m === 'repaso') {
@@ -90,7 +102,7 @@ export default function App() {
     }
 
     setMode(m);
-    if (tema) setSelectedTema(tema);
+    if (temaId) setSelectedTemaId(temaId);
     setTestQuestions(q);
     setIndex(0);
     setScore(0);
@@ -137,10 +149,10 @@ export default function App() {
     .slice(0, 10);
 
   const progressByTema = temas.map((t) => {
-    const qTema = questions.filter((q) => q.tema === t);
+    const qTema = questions.filter((q) => q.temaId === t.id);
     const ans = qTema.reduce((a, q) => a + (stats[q.id]?.answered ?? 0), 0);
     const cor = qTema.reduce((a, q) => a + (stats[q.id]?.correct ?? 0), 0);
-    return { tema: t, rate: ans ? Math.round((cor / ans) * 100) : 0, ans };
+    return { tema: `Tema ${t.numero}`, titulo: t.titulo, rate: ans ? Math.round((cor / ans) * 100) : 0, ans };
   });
 
   return (
@@ -198,10 +210,18 @@ export default function App() {
       {screen === 'tema' && (
         <ScrollView contentContainerStyle={styles.container}>
           <Text style={styles.title}>Selecciona tema</Text>
-          {temas.map((t) => (
-            <TouchableOpacity key={t} style={styles.btn} onPress={() => startTest('tema', t)}>
-              <Text style={styles.btnText}>{t}</Text>
-            </TouchableOpacity>
+          {bloques.map((b) => (
+            <View key={b.id} style={styles.card}>
+              <Text style={styles.cardTitle}>{b.nombre}</Text>
+              {b.temas.map((t) => {
+                const count = questions.filter((q) => q.temaId === t.id).length;
+                return (
+                  <TouchableOpacity key={t.id} style={styles.secondaryBtn} onPress={() => startTest('tema', t.id)}>
+                    <Text style={styles.secondaryBtnText}>Tema {t.numero} · {count} preguntas</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
           ))}
           <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('home')}>
             <Text style={styles.secondaryBtnText}>Volver</Text>
@@ -211,7 +231,7 @@ export default function App() {
 
       {screen === 'test' && testQuestions[index] && (
         <View style={styles.container}>
-          <Text style={styles.sub}>{mode === 'tema' ? `Tema: ${selectedTema}` : mode.toUpperCase()} · {index + 1}/{testQuestions.length}</Text>
+          <Text style={styles.sub}>{mode === 'tema' ? temaTitle(selectedTemaId) : mode.toUpperCase()} · {index + 1}/{testQuestions.length}</Text>
           <Text style={styles.question}>{testQuestions[index].enunciado}</Text>
 
           {testQuestions[index].opciones.map((o, i) => (
@@ -264,7 +284,7 @@ export default function App() {
           <View style={styles.card}>
             <Text style={styles.cardTitle}>Preguntas más falladas</Text>
             {worstQuestions.length === 0 ? <Text style={styles.text}>Sin fallos aún</Text> : worstQuestions.map((w) => (
-              <Text key={w.q.id} style={styles.text}>• {w.q.id} ({w.q.tema}) → {w.wrong} fallos</Text>
+              <Text key={w.q.id} style={styles.text}>• {w.q.id} ({temaTitle(w.q.temaId, w.q.tema)}) → {w.wrong} fallos</Text>
             ))}
           </View>
 
