@@ -50,6 +50,22 @@ function shuffle<T>(arr: T[]) {
   return copy;
 }
 
+function uniqueByStatement(list: Question[]) {
+  const seen = new Set<string>();
+  const out: Question[] = [];
+  for (const q of list) {
+    const key = q.enunciado.trim().toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(q);
+  }
+  return out;
+}
+
+function pickUniqueQuestions(source: Question[], count: number) {
+  return shuffle(uniqueByStatement(source)).slice(0, count);
+}
+
 export default function App() {
   const [screen, setScreen] = useState<Screen>('profile');
   const [profile, setProfile] = useState<OppProfile>('pn');
@@ -91,9 +107,9 @@ export default function App() {
   const startTest = (m: Mode, temaId?: string) => {
     let q: Question[] = [];
 
-    if (m === 'tema') q = activeQuestions.filter((x) => x.temaId === temaId);
-    if (m === 'aleatorio') q = shuffle(activeQuestions).slice(0, 20);
-    if (m === 'simulacro') q = shuffle(activeQuestions).slice(0, 50);
+    if (m === 'tema') q = pickUniqueQuestions(activeQuestions.filter((x) => x.temaId === temaId), 40);
+    if (m === 'aleatorio') q = pickUniqueQuestions(activeQuestions, 20);
+    if (m === 'simulacro') q = pickUniqueQuestions(activeQuestions, 50);
     if (m === 'repaso') {
       const failed = activeQuestions.filter((x) => (stats[x.id]?.wrong ?? 0) > 0);
       q = shuffle(failed).slice(0, 30);
@@ -141,29 +157,40 @@ export default function App() {
     setScreen('test');
   };
 
-  const answer = async (optionIndex: number) => {
+  const answer = (optionIndex: number) => {
     const current = testQuestions[index];
-    const isCorrect = optionIndex === current.correcta;
-    if (isCorrect) setScore((s) => s + 1);
-
     setSessionAnswers((prev) => ({ ...prev, [current.id]: optionIndex }));
+  };
 
-    const old = stats[current.id] ?? { answered: 0, correct: 0, wrong: 0 };
-    const updated: StatsMap = {
-      ...stats,
-      [current.id]: {
+  const goNext = () => {
+    if (index + 1 < testQuestions.length) setIndex((i) => i + 1);
+  };
+
+  const goPrev = () => {
+    if (index > 0) setIndex((i) => i - 1);
+  };
+
+  const finishTest = async () => {
+    let localScore = 0;
+    const updated = { ...stats };
+
+    for (const q of testQuestions) {
+      const ans = sessionAnswers[q.id];
+      if (ans === undefined) continue;
+      const isCorrect = ans === q.correcta;
+      if (isCorrect) localScore += 1;
+
+      const old = updated[q.id] ?? { answered: 0, correct: 0, wrong: 0 };
+      updated[q.id] = {
         answered: old.answered + 1,
         correct: old.correct + (isCorrect ? 1 : 0),
         wrong: old.wrong + (isCorrect ? 0 : 1),
-      },
-    };
-    await persistStats(updated);
-
-    if (index + 1 >= testQuestions.length) {
-      setScreen('result');
-    } else {
-      setIndex((i) => i + 1);
+      };
     }
+
+    setScore(localScore);
+    await persistStats(updated);
+    setScreen('result');
   };
 
   const totalAnswered = Object.values(stats).reduce((a, s) => a + s.answered, 0);
@@ -300,13 +327,35 @@ export default function App() {
           <Text style={styles.sub}>{mode === 'tema' ? temaTitle(selectedTemaId) : mode.toUpperCase()} · {index + 1}/{testQuestions.length}</Text>
           <Text style={styles.question}>{testQuestions[index].enunciado}</Text>
 
-          {testQuestions[index].opciones.map((o, i) => (
-            <TouchableOpacity key={i} style={styles.option} onPress={() => answer(i)}>
-              <Text style={styles.optionText}>{String.fromCharCode(65 + i)}. {o}</Text>
-            </TouchableOpacity>
-          ))}
+          {testQuestions[index].opciones.map((o, i) => {
+            const selected = sessionAnswers[testQuestions[index].id] === i;
+            return (
+              <TouchableOpacity key={i} style={[styles.option, selected && styles.optionSelected]} onPress={() => answer(i)}>
+                <Text style={styles.optionText}>{String.fromCharCode(65 + i)}. {o}</Text>
+              </TouchableOpacity>
+            );
+          })}
 
           <Text style={styles.sub}>Las correcciones se mostrarán al finalizar el test.</Text>
+
+          <View style={styles.navRow}>
+            <TouchableOpacity style={styles.secondaryBtn} onPress={goPrev}>
+              <Text style={styles.secondaryBtnText}>Anterior</Text>
+            </TouchableOpacity>
+            {index + 1 < testQuestions.length ? (
+              <TouchableOpacity style={styles.btn} onPress={goNext}>
+                <Text style={styles.btnText}>Siguiente</Text>
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity style={styles.btn} onPress={() => void finishTest()}>
+                <Text style={styles.btnText}>Finalizar test</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+
+          <TouchableOpacity style={styles.exitBtn} onPress={() => setScreen('home')}>
+            <Text style={styles.exitBtnText}>Salir del test</Text>
+          </TouchableOpacity>
         </View>
       )}
 
@@ -392,7 +441,11 @@ const styles = StyleSheet.create({
   bannerText: { color: '#3E6E90', fontWeight: '700' },
   question: { color: '#0B3658', fontSize: 21, fontWeight: '700', marginVertical: 6 },
   option: { backgroundColor: '#FFFFFF', borderRadius: 12, borderWidth: 1, borderColor: '#BFE4FA', padding: 12 },
+  optionSelected: { borderColor: '#2D8FE6', backgroundColor: '#DFF1FF' },
   optionText: { color: '#123F61' },
+  navRow: { flexDirection: 'row', gap: 8, marginTop: 8 },
+  exitBtn: { alignItems: 'center', paddingVertical: 10 },
+  exitBtnText: { color: '#B42318', fontWeight: '700' },
   feedbackBox: { backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: '#BFE4FA', borderRadius: 12, padding: 12, marginTop: 8, gap: 8 },
   interstitial: { marginVertical: 10, height: 90, borderRadius: 12, borderWidth: 1, borderColor: '#A8D9F5', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F4FBFF' },
 });
