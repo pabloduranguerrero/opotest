@@ -58,8 +58,7 @@ export default function App() {
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [lastCorrect, setLastCorrect] = useState(false);
+  const [sessionAnswers, setSessionAnswers] = useState<Record<string, number>>({});
   const [stats, setStats] = useState<StatsMap>({});
   const [started, setStarted] = useState(false);
 
@@ -138,16 +137,16 @@ export default function App() {
     setTestQuestions(q);
     setIndex(0);
     setScore(0);
-    setShowFeedback(false);
+    setSessionAnswers({});
     setScreen('test');
   };
 
   const answer = async (optionIndex: number) => {
     const current = testQuestions[index];
     const isCorrect = optionIndex === current.correcta;
-    setLastCorrect(isCorrect);
-    setShowFeedback(true);
     if (isCorrect) setScore((s) => s + 1);
+
+    setSessionAnswers((prev) => ({ ...prev, [current.id]: optionIndex }));
 
     const old = stats[current.id] ?? { answered: 0, correct: 0, wrong: 0 };
     const updated: StatsMap = {
@@ -159,10 +158,7 @@ export default function App() {
       },
     };
     await persistStats(updated);
-  };
 
-  const next = () => {
-    setShowFeedback(false);
     if (index + 1 >= testQuestions.length) {
       setScreen('result');
     } else {
@@ -191,7 +187,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.safe}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
 
       {screen === 'profile' && (
         <View style={styles.container}>
@@ -305,37 +301,45 @@ export default function App() {
           <Text style={styles.question}>{testQuestions[index].enunciado}</Text>
 
           {testQuestions[index].opciones.map((o, i) => (
-            <TouchableOpacity key={i} style={styles.option} disabled={showFeedback} onPress={() => answer(i)}>
+            <TouchableOpacity key={i} style={styles.option} onPress={() => answer(i)}>
               <Text style={styles.optionText}>{String.fromCharCode(65 + i)}. {o}</Text>
             </TouchableOpacity>
           ))}
 
-          {showFeedback && (
-            <View style={styles.feedbackBox}>
-              <Text style={{ color: lastCorrect ? '#42F87B' : '#FF6B6B', fontWeight: '800' }}>
-                {lastCorrect ? '✅ Correcta' : '❌ Incorrecta'}
-              </Text>
-              <Text style={styles.text}>{testQuestions[index].explicacion}</Text>
-              <TouchableOpacity style={styles.btn} onPress={next}>
-                <Text style={styles.btnText}>{index + 1 >= testQuestions.length ? 'Ver resultado' : 'Siguiente'}</Text>
-              </TouchableOpacity>
-            </View>
-          )}
+          <Text style={styles.sub}>Las correcciones se mostrarán al finalizar el test.</Text>
         </View>
       )}
 
       {screen === 'result' && (
-        <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
           <Text style={styles.title}>Resultado</Text>
           <Text style={styles.text}>Aciertos: {score}/{testQuestions.length}</Text>
           <Text style={styles.text}>Porcentaje: {Math.round((score / testQuestions.length) * 100)}%</Text>
+
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>Errores del test</Text>
+            {testQuestions.filter((q) => sessionAnswers[q.id] !== undefined && sessionAnswers[q.id] !== q.correcta).length === 0 ? (
+              <Text style={styles.text}>Sin errores en este test. ¡Buen trabajo!</Text>
+            ) : (
+              testQuestions
+                .filter((q) => sessionAnswers[q.id] !== undefined && sessionAnswers[q.id] !== q.correcta)
+                .map((q) => (
+                  <View key={q.id} style={{ marginBottom: 10 }}>
+                    <Text style={styles.text}>• {q.enunciado}</Text>
+                    <Text style={styles.text}>Tu respuesta: {String.fromCharCode(65 + (sessionAnswers[q.id] ?? 0))}</Text>
+                    <Text style={styles.text}>Correcta: {String.fromCharCode(65 + q.correcta)}</Text>
+                    <Text style={styles.sub}>{q.explicacion}</Text>
+                  </View>
+                ))
+            )}
+          </View>
 
           <View style={styles.interstitial}><Text style={styles.bannerText}>Interstitial (simulado)</Text></View>
 
           <TouchableOpacity style={styles.btn} onPress={() => setScreen('home')}>
             <Text style={styles.btnText}>Volver al inicio</Text>
           </TouchableOpacity>
-        </View>
+        </ScrollView>
       )}
 
       {screen === 'stats' && (
@@ -371,24 +375,24 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#0E1117' },
+  safe: { flex: 1, backgroundColor: '#EAF7FF' },
   container: { padding: 16, gap: 10 },
   hero: { minHeight: 420, justifyContent: 'center', alignItems: 'center', gap: 12 },
   logoEmoji: { fontSize: 72 },
-  title: { color: '#fff', fontSize: 30, fontWeight: '800', textAlign: 'center' },
-  sub: { color: '#9FB0CB' },
-  card: { backgroundColor: '#171C26', borderRadius: 14, borderWidth: 1, borderColor: '#283247', padding: 12 },
-  cardTitle: { color: '#E6EBF7', fontWeight: '800', marginBottom: 6 },
-  text: { color: '#CED7E9', marginBottom: 4 },
-  btn: { backgroundColor: '#3B82F6', borderRadius: 12, paddingVertical: 14, alignItems: 'center' },
+  title: { color: '#0B3658', fontSize: 30, fontWeight: '800', textAlign: 'center' },
+  sub: { color: '#3E6E90' },
+  card: { backgroundColor: '#FFFFFF', borderRadius: 14, borderWidth: 1, borderColor: '#BFE4FA', padding: 12 },
+  cardTitle: { color: '#0B3658', fontWeight: '800', marginBottom: 6 },
+  text: { color: '#1F4F72', marginBottom: 4 },
+  btn: { backgroundColor: '#2D8FE6', borderRadius: 12, paddingVertical: 14, alignItems: 'center' },
   btnText: { color: '#fff', fontWeight: '800' },
-  secondaryBtn: { backgroundColor: '#2B3548', borderRadius: 12, paddingVertical: 12, alignItems: 'center' },
-  secondaryBtnText: { color: '#fff', fontWeight: '700' },
-  banner: { marginTop: 6, height: 50, borderRadius: 10, borderWidth: 1, borderColor: '#33415B', justifyContent: 'center', alignItems: 'center' },
-  bannerText: { color: '#9FB0CB', fontWeight: '700' },
-  question: { color: '#fff', fontSize: 21, fontWeight: '700', marginVertical: 6 },
-  option: { backgroundColor: '#1B2332', borderRadius: 12, borderWidth: 1, borderColor: '#31405C', padding: 12 },
-  optionText: { color: '#E6EBF7' },
-  feedbackBox: { backgroundColor: '#121722', borderWidth: 1, borderColor: '#2A3347', borderRadius: 12, padding: 12, marginTop: 8, gap: 8 },
-  interstitial: { marginVertical: 10, height: 90, borderRadius: 12, borderWidth: 1, borderColor: '#33415B', alignItems: 'center', justifyContent: 'center' },
+  secondaryBtn: { backgroundColor: '#D9F0FF', borderRadius: 12, paddingVertical: 12, alignItems: 'center' },
+  secondaryBtnText: { color: '#0B3658', fontWeight: '700' },
+  banner: { marginTop: 6, height: 50, borderRadius: 10, borderWidth: 1, borderColor: '#A8D9F5', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F4FBFF' },
+  bannerText: { color: '#3E6E90', fontWeight: '700' },
+  question: { color: '#0B3658', fontSize: 21, fontWeight: '700', marginVertical: 6 },
+  option: { backgroundColor: '#FFFFFF', borderRadius: 12, borderWidth: 1, borderColor: '#BFE4FA', padding: 12 },
+  optionText: { color: '#123F61' },
+  feedbackBox: { backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: '#BFE4FA', borderRadius: 12, padding: 12, marginTop: 8, gap: 8 },
+  interstitial: { marginVertical: 10, height: 90, borderRadius: 12, borderWidth: 1, borderColor: '#A8D9F5', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F4FBFF' },
 });
