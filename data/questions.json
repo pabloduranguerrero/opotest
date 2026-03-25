@@ -279,6 +279,1616 @@
       "correcta": 1,
       "explicacion": "El aprendizaje basado en errores y repetición espaciada mejora resultados.",
       "temaId": "T45"
+    },
+    {
+      "id": "pn_auto_1",
+      "tema": "El derecho.",
+      "temaId": "T1",
+      "enunciado": "Sobre el Tema 1 (El derecho.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 1, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_2",
+      "tema": "El derecho.",
+      "temaId": "T1",
+      "enunciado": "Sobre el Tema 1 (El derecho.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 1, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_3",
+      "tema": "El derecho.",
+      "temaId": "T1",
+      "enunciado": "Sobre el Tema 1 (El derecho.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 1, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_4",
+      "tema": "Constitución Española (I)",
+      "temaId": "T2",
+      "enunciado": "Sobre el Tema 2 (Constitución Española (I): Estructura y caracteres de la Constitución Española de 1978.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 2, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_5",
+      "tema": "Constitución Española (I)",
+      "temaId": "T2",
+      "enunciado": "Sobre el Tema 2 (Constitución Española (I): Estructura y caracteres de la Constitución Española de 1978.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 2, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_6",
+      "tema": "La Constitución Española (II).",
+      "temaId": "T3",
+      "enunciado": "Sobre el Tema 3 (La Constitución Española (II).), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 3, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_7",
+      "tema": "La Constitución Española (II).",
+      "temaId": "T3",
+      "enunciado": "Sobre el Tema 3 (La Constitución Española (II).), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 3, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_8",
+      "tema": "La Unión Europea.",
+      "temaId": "T4",
+      "enunciado": "Sobre el Tema 4 (La Unión Europea.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 4, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_9",
+      "tema": "La Unión Europea.",
+      "temaId": "T4",
+      "enunciado": "Sobre el Tema 4 (La Unión Europea.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 4, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_10",
+      "tema": "La Unión Europea.",
+      "temaId": "T4",
+      "enunciado": "Sobre el Tema 4 (La Unión Europea.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 4, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_11",
+      "tema": "La organización y funcionamiento de la Administración Genera",
+      "temaId": "T5",
+      "enunciado": "Sobre el Tema 5 (La organización y funcionamiento de la Administración General del Estado.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 5, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_12",
+      "tema": "La organización y funcionamiento de la Administración Genera",
+      "temaId": "T5",
+      "enunciado": "Sobre el Tema 5 (La organización y funcionamiento de la Administración General del Estado.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 5, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_13",
+      "tema": "Los funcionarios públicos.",
+      "temaId": "T6",
+      "enunciado": "Sobre el Tema 6 (Los funcionarios públicos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 6, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_14",
+      "tema": "Los funcionarios públicos.",
+      "temaId": "T6",
+      "enunciado": "Sobre el Tema 6 (Los funcionarios públicos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 6, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_15",
+      "tema": "El Ministerio del Interior.",
+      "temaId": "T7",
+      "enunciado": "Sobre el Tema 7 (El Ministerio del Interior.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 7, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_16",
+      "tema": "El Ministerio del Interior.",
+      "temaId": "T7",
+      "enunciado": "Sobre el Tema 7 (El Ministerio del Interior.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 7, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_17",
+      "tema": "El Ministerio del Interior.",
+      "temaId": "T7",
+      "enunciado": "Sobre el Tema 7 (El Ministerio del Interior.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 7, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_18",
+      "tema": "La Dirección General de la Policía.",
+      "temaId": "T8",
+      "enunciado": "Sobre el Tema 8 (La Dirección General de la Policía.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 8, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_19",
+      "tema": "La Dirección General de la Policía.",
+      "temaId": "T8",
+      "enunciado": "Sobre el Tema 8 (La Dirección General de la Policía.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 8, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_20",
+      "tema": "Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad.",
+      "temaId": "T9",
+      "enunciado": "Sobre el Tema 9 (Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 9, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_21",
+      "tema": "Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad.",
+      "temaId": "T9",
+      "enunciado": "Sobre el Tema 9 (Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 9, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_22",
+      "tema": "Entrada, libre circulación y residencia en España de ciudada",
+      "temaId": "T10",
+      "enunciado": "Sobre el Tema 10 (Entrada, libre circulación y residencia en España de ciudadanos UE/EEE.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 10, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_23",
+      "tema": "Entrada, libre circulación y residencia en España de ciudada",
+      "temaId": "T10",
+      "enunciado": "Sobre el Tema 10 (Entrada, libre circulación y residencia en España de ciudadanos UE/EEE.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 10, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_24",
+      "tema": "Entrada, libre circulación y residencia en España de ciudada",
+      "temaId": "T10",
+      "enunciado": "Sobre el Tema 10 (Entrada, libre circulación y residencia en España de ciudadanos UE/EEE.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 10, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_25",
+      "tema": "Infracciones en materia de extranjería y régimen sancionador",
+      "temaId": "T11",
+      "enunciado": "Sobre el Tema 11 (Infracciones en materia de extranjería y régimen sancionador.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 11, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_26",
+      "tema": "Infracciones en materia de extranjería y régimen sancionador",
+      "temaId": "T11",
+      "enunciado": "Sobre el Tema 11 (Infracciones en materia de extranjería y régimen sancionador.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 11, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_27",
+      "tema": "Infracciones en materia de extranjería y régimen sancionador",
+      "temaId": "T11",
+      "enunciado": "Sobre el Tema 11 (Infracciones en materia de extranjería y régimen sancionador.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 11, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_28",
+      "tema": "La protección internacional.",
+      "temaId": "T12",
+      "enunciado": "Sobre el Tema 12 (La protección internacional.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 12, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_29",
+      "tema": "La protección internacional.",
+      "temaId": "T12",
+      "enunciado": "Sobre el Tema 12 (La protección internacional.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 12, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_30",
+      "tema": "La protección internacional.",
+      "temaId": "T12",
+      "enunciado": "Sobre el Tema 12 (La protección internacional.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 12, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_31",
+      "tema": "Disposiciones generales en materia de Seguridad Privada en E",
+      "temaId": "T13",
+      "enunciado": "Sobre el Tema 13 (Disposiciones generales en materia de Seguridad Privada en España.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 13, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_32",
+      "tema": "Disposiciones generales en materia de Seguridad Privada en E",
+      "temaId": "T13",
+      "enunciado": "Sobre el Tema 13 (Disposiciones generales en materia de Seguridad Privada en España.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 13, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_33",
+      "tema": "Disposiciones generales en materia de Seguridad Privada en E",
+      "temaId": "T13",
+      "enunciado": "Sobre el Tema 13 (Disposiciones generales en materia de Seguridad Privada en España.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 13, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_34",
+      "tema": "Medidas para la protección de infraestructuras críticas.",
+      "temaId": "T15",
+      "enunciado": "Sobre el Tema 15 (Medidas para la protección de infraestructuras críticas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 15, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_35",
+      "tema": "Medidas para la protección de infraestructuras críticas.",
+      "temaId": "T15",
+      "enunciado": "Sobre el Tema 15 (Medidas para la protección de infraestructuras críticas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 15, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_36",
+      "tema": "Derecho penal Parte General.",
+      "temaId": "T16",
+      "enunciado": "Sobre el Tema 16 (Derecho penal Parte General.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 16, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_37",
+      "tema": "Derecho Penal Especial. Homicidio y sus formas.",
+      "temaId": "T17",
+      "enunciado": "Sobre el Tema 17 (Derecho Penal Especial. Homicidio y sus formas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 17, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_38",
+      "tema": "Derecho Penal Especial. Homicidio y sus formas.",
+      "temaId": "T17",
+      "enunciado": "Sobre el Tema 17 (Derecho Penal Especial. Homicidio y sus formas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 17, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_39",
+      "tema": "Delitos contra el patrimonio y contra el orden socioeconómic",
+      "temaId": "T18",
+      "enunciado": "Sobre el Tema 18 (Delitos contra el patrimonio y contra el orden socioeconómico.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 18, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_40",
+      "tema": "Delitos contra el patrimonio y contra el orden socioeconómic",
+      "temaId": "T18",
+      "enunciado": "Sobre el Tema 18 (Delitos contra el patrimonio y contra el orden socioeconómico.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 18, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_41",
+      "tema": "Delitos contra el orden público.",
+      "temaId": "T19",
+      "enunciado": "Sobre el Tema 19 (Delitos contra el orden público.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 19, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_42",
+      "tema": "Delitos contra el orden público.",
+      "temaId": "T19",
+      "enunciado": "Sobre el Tema 19 (Delitos contra el orden público.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 19, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_43",
+      "tema": "Delitos contra el orden público.",
+      "temaId": "T19",
+      "enunciado": "Sobre el Tema 19 (Delitos contra el orden público.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 19, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_44",
+      "tema": "Delitos informáticos.",
+      "temaId": "T20",
+      "enunciado": "Sobre el Tema 20 (Delitos informáticos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 20, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_45",
+      "tema": "Delitos informáticos.",
+      "temaId": "T20",
+      "enunciado": "Sobre el Tema 20 (Delitos informáticos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 20, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_46",
+      "tema": "Delitos informáticos.",
+      "temaId": "T20",
+      "enunciado": "Sobre el Tema 20 (Delitos informáticos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 20, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_47",
+      "tema": "Noción de Derecho procesal penal.",
+      "temaId": "T21",
+      "enunciado": "Sobre el Tema 21 (Noción de Derecho procesal penal.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 21, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_48",
+      "tema": "Ley 4/2015, Estatuto de la Víctima del Delito.",
+      "temaId": "T22",
+      "enunciado": "Sobre el Tema 22 (Ley 4/2015, Estatuto de la Víctima del Delito.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 22, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_49",
+      "tema": "Ley 4/2015, Estatuto de la Víctima del Delito.",
+      "temaId": "T22",
+      "enunciado": "Sobre el Tema 22 (Ley 4/2015, Estatuto de la Víctima del Delito.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 22, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_50",
+      "tema": "Ley 4/2015, Estatuto de la Víctima del Delito.",
+      "temaId": "T22",
+      "enunciado": "Sobre el Tema 22 (Ley 4/2015, Estatuto de la Víctima del Delito.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 22, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_51",
+      "tema": "Medidas de protección integral contra la violencia de género",
+      "temaId": "T23",
+      "enunciado": "Sobre el Tema 23 (Medidas de protección integral contra la violencia de género.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 23, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_52",
+      "tema": "Medidas de protección integral contra la violencia de género",
+      "temaId": "T23",
+      "enunciado": "Sobre el Tema 23 (Medidas de protección integral contra la violencia de género.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 23, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_53",
+      "tema": "Medidas de protección integral contra la violencia de género",
+      "temaId": "T23",
+      "enunciado": "Sobre el Tema 23 (Medidas de protección integral contra la violencia de género.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 23, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_54",
+      "tema": "Introducción a la Prevención de Riesgos Laborales.",
+      "temaId": "T24",
+      "enunciado": "Sobre el Tema 24 (Introducción a la Prevención de Riesgos Laborales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 24, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_55",
+      "tema": "Introducción a la Prevención de Riesgos Laborales.",
+      "temaId": "T24",
+      "enunciado": "Sobre el Tema 24 (Introducción a la Prevención de Riesgos Laborales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 24, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_56",
+      "tema": "Introducción a la Prevención de Riesgos Laborales.",
+      "temaId": "T24",
+      "enunciado": "Sobre el Tema 24 (Introducción a la Prevención de Riesgos Laborales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 24, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_57",
+      "tema": "Marco normativo básico en prevención de riesgos laborales.",
+      "temaId": "T25",
+      "enunciado": "Sobre el Tema 25 (Marco normativo básico en prevención de riesgos laborales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 25, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_58",
+      "tema": "Marco normativo básico en prevención de riesgos laborales.",
+      "temaId": "T25",
+      "enunciado": "Sobre el Tema 25 (Marco normativo básico en prevención de riesgos laborales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 25, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_59",
+      "tema": "La protección de datos de carácter personal.",
+      "temaId": "T26",
+      "enunciado": "Sobre el Tema 26 (La protección de datos de carácter personal.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 26, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_60",
+      "tema": "La protección de datos de carácter personal.",
+      "temaId": "T26",
+      "enunciado": "Sobre el Tema 26 (La protección de datos de carácter personal.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 26, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_61",
+      "tema": "La protección de datos de carácter personal.",
+      "temaId": "T26",
+      "enunciado": "Sobre el Tema 26 (La protección de datos de carácter personal.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 26, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_62",
+      "tema": "Derechos Humanos.",
+      "temaId": "T27",
+      "enunciado": "Sobre el Tema 27 (Derechos Humanos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 27, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_63",
+      "tema": "Derechos Humanos.",
+      "temaId": "T27",
+      "enunciado": "Sobre el Tema 27 (Derechos Humanos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 27, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_64",
+      "tema": "Derechos Humanos.",
+      "temaId": "T27",
+      "enunciado": "Sobre el Tema 27 (Derechos Humanos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 27, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_65",
+      "tema": "Globalización y antiglobalización.",
+      "temaId": "T28",
+      "enunciado": "Sobre el Tema 28 (Globalización y antiglobalización.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 28, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_66",
+      "tema": "Globalización y antiglobalización.",
+      "temaId": "T28",
+      "enunciado": "Sobre el Tema 28 (Globalización y antiglobalización.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 28, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_67",
+      "tema": "Globalización y antiglobalización.",
+      "temaId": "T28",
+      "enunciado": "Sobre el Tema 28 (Globalización y antiglobalización.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 28, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_68",
+      "tema": "Actitudes y valores sociales.",
+      "temaId": "T29",
+      "enunciado": "Sobre el Tema 29 (Actitudes y valores sociales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 29, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_69",
+      "tema": "Actitudes y valores sociales.",
+      "temaId": "T29",
+      "enunciado": "Sobre el Tema 29 (Actitudes y valores sociales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 29, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_70",
+      "tema": "Actitudes y valores sociales.",
+      "temaId": "T29",
+      "enunciado": "Sobre el Tema 29 (Actitudes y valores sociales.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 29, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_71",
+      "tema": "Principios éticos de la sociedad actual.",
+      "temaId": "T30",
+      "enunciado": "Sobre el Tema 30 (Principios éticos de la sociedad actual.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 30, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_72",
+      "tema": "Principios éticos de la sociedad actual.",
+      "temaId": "T30",
+      "enunciado": "Sobre el Tema 30 (Principios éticos de la sociedad actual.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 30, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_73",
+      "tema": "Principios éticos de la sociedad actual.",
+      "temaId": "T30",
+      "enunciado": "Sobre el Tema 30 (Principios éticos de la sociedad actual.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 30, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_74",
+      "tema": "Inmigración.",
+      "temaId": "T31",
+      "enunciado": "Sobre el Tema 31 (Inmigración.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 31, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_75",
+      "tema": "Inmigración.",
+      "temaId": "T31",
+      "enunciado": "Sobre el Tema 31 (Inmigración.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 31, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_76",
+      "tema": "Inmigración.",
+      "temaId": "T31",
+      "enunciado": "Sobre el Tema 31 (Inmigración.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 31, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_77",
+      "tema": "Concepto de geografía humana.",
+      "temaId": "T32",
+      "enunciado": "Sobre el Tema 32 (Concepto de geografía humana.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 32, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_78",
+      "tema": "Concepto de geografía humana.",
+      "temaId": "T32",
+      "enunciado": "Sobre el Tema 32 (Concepto de geografía humana.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 32, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_79",
+      "tema": "Concepto de geografía humana.",
+      "temaId": "T32",
+      "enunciado": "Sobre el Tema 32 (Concepto de geografía humana.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 32, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_80",
+      "tema": "La seguridad.",
+      "temaId": "T33",
+      "enunciado": "Sobre el Tema 33 (La seguridad.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 33, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_81",
+      "tema": "La seguridad.",
+      "temaId": "T33",
+      "enunciado": "Sobre el Tema 33 (La seguridad.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 33, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_82",
+      "tema": "Drogodependencias.",
+      "temaId": "T34",
+      "enunciado": "Sobre el Tema 34 (Drogodependencias.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 34, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_83",
+      "tema": "Drogodependencias.",
+      "temaId": "T34",
+      "enunciado": "Sobre el Tema 34 (Drogodependencias.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 34, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_84",
+      "tema": "Drogodependencias.",
+      "temaId": "T34",
+      "enunciado": "Sobre el Tema 34 (Drogodependencias.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 34, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_85",
+      "tema": "El desarrollo sostenible.",
+      "temaId": "T35",
+      "enunciado": "Sobre el Tema 35 (El desarrollo sostenible.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 35, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_86",
+      "tema": "El desarrollo sostenible.",
+      "temaId": "T35",
+      "enunciado": "Sobre el Tema 35 (El desarrollo sostenible.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 35, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_87",
+      "tema": "El desarrollo sostenible.",
+      "temaId": "T35",
+      "enunciado": "Sobre el Tema 35 (El desarrollo sostenible.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 35, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_88",
+      "tema": "Gramática de la lengua española.",
+      "temaId": "T36",
+      "enunciado": "Sobre el Tema 36 (Gramática de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 36, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_89",
+      "tema": "Gramática de la lengua española.",
+      "temaId": "T36",
+      "enunciado": "Sobre el Tema 36 (Gramática de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 36, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_90",
+      "tema": "Gramática de la lengua española.",
+      "temaId": "T36",
+      "enunciado": "Sobre el Tema 36 (Gramática de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 36, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_91",
+      "tema": "Ortografía de la lengua española.",
+      "temaId": "T37",
+      "enunciado": "Sobre el Tema 37 (Ortografía de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 37, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_92",
+      "tema": "Ortografía de la lengua española.",
+      "temaId": "T37",
+      "enunciado": "Sobre el Tema 37 (Ortografía de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 37, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_93",
+      "tema": "Ortografía de la lengua española.",
+      "temaId": "T37",
+      "enunciado": "Sobre el Tema 37 (Ortografía de la lengua española.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 37, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_94",
+      "tema": "Fundamentos de sistemas operativos.",
+      "temaId": "T38",
+      "enunciado": "Sobre el Tema 38 (Fundamentos de sistemas operativos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 38, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_95",
+      "tema": "Fundamentos de sistemas operativos.",
+      "temaId": "T38",
+      "enunciado": "Sobre el Tema 38 (Fundamentos de sistemas operativos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 38, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_96",
+      "tema": "Fundamentos de sistemas operativos.",
+      "temaId": "T38",
+      "enunciado": "Sobre el Tema 38 (Fundamentos de sistemas operativos.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 38, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_97",
+      "tema": "Redes informáticas.",
+      "temaId": "T39",
+      "enunciado": "Sobre el Tema 39 (Redes informáticas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 39, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_98",
+      "tema": "Redes informáticas.",
+      "temaId": "T39",
+      "enunciado": "Sobre el Tema 39 (Redes informáticas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 39, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_99",
+      "tema": "Redes informáticas.",
+      "temaId": "T39",
+      "enunciado": "Sobre el Tema 39 (Redes informáticas.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 39, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_100",
+      "tema": "Inteligencia.",
+      "temaId": "T40",
+      "enunciado": "Sobre el Tema 40 (Inteligencia.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 40, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_101",
+      "tema": "Inteligencia.",
+      "temaId": "T40",
+      "enunciado": "Sobre el Tema 40 (Inteligencia.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 40, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_102",
+      "tema": "Inteligencia.",
+      "temaId": "T40",
+      "enunciado": "Sobre el Tema 40 (Inteligencia.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 40, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_103",
+      "tema": "Ciberdelincuencia y agentes de la amenaza.",
+      "temaId": "T41",
+      "enunciado": "Sobre el Tema 41 (Ciberdelincuencia y agentes de la amenaza.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 41, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_104",
+      "tema": "Ciberdelincuencia y agentes de la amenaza.",
+      "temaId": "T41",
+      "enunciado": "Sobre el Tema 41 (Ciberdelincuencia y agentes de la amenaza.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 41, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_105",
+      "tema": "Ciberdelincuencia y agentes de la amenaza.",
+      "temaId": "T41",
+      "enunciado": "Sobre el Tema 41 (Ciberdelincuencia y agentes de la amenaza.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 41, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_106",
+      "tema": "Origen de las armas de fuego.",
+      "temaId": "T42",
+      "enunciado": "Sobre el Tema 42 (Origen de las armas de fuego.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 42, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_107",
+      "tema": "Origen de las armas de fuego.",
+      "temaId": "T42",
+      "enunciado": "Sobre el Tema 42 (Origen de las armas de fuego.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 42, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_108",
+      "tema": "Origen de las armas de fuego.",
+      "temaId": "T42",
+      "enunciado": "Sobre el Tema 42 (Origen de las armas de fuego.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 42, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_109",
+      "tema": "El vehículo prioritario.",
+      "temaId": "T43",
+      "enunciado": "Sobre el Tema 43 (El vehículo prioritario.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 43, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_110",
+      "tema": "El vehículo prioritario.",
+      "temaId": "T43",
+      "enunciado": "Sobre el Tema 43 (El vehículo prioritario.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 43, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_111",
+      "tema": "La Seguridad en la Conducción de Vehículos Prioritarios.",
+      "temaId": "T44",
+      "enunciado": "Sobre el Tema 44 (La Seguridad en la Conducción de Vehículos Prioritarios.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 44, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_112",
+      "tema": "La Seguridad en la Conducción de Vehículos Prioritarios.",
+      "temaId": "T44",
+      "enunciado": "Sobre el Tema 44 (La Seguridad en la Conducción de Vehículos Prioritarios.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 44, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_113",
+      "tema": "La Seguridad en la Conducción de Vehículos Prioritarios.",
+      "temaId": "T44",
+      "enunciado": "Sobre el Tema 44 (La Seguridad en la Conducción de Vehículos Prioritarios.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 44, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_114",
+      "tema": "Prevención de Riesgos Laborales en Seguridad Vial.",
+      "temaId": "T45",
+      "enunciado": "Sobre el Tema 45 (Prevención de Riesgos Laborales en Seguridad Vial.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 45, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
+    },
+    {
+      "id": "pn_auto_115",
+      "tema": "Prevención de Riesgos Laborales en Seguridad Vial.",
+      "temaId": "T45",
+      "enunciado": "Sobre el Tema 45 (Prevención de Riesgos Laborales en Seguridad Vial.), ¿cuál afirmación es correcta?",
+      "opciones": [
+        "Que su regulación depende exclusivamente de una orden interna",
+        "Que su contenido y aplicación se rigen por el marco legal vigente",
+        "Que no tiene relevancia en el examen oficial",
+        "Que solo se aplica a procedimientos judiciales civiles"
+      ],
+      "correcta": 1,
+      "explicacion": "En el Tema 45, la respuesta válida es la que se ajusta al marco legal y doctrinal aplicable."
     }
   ]
 }
