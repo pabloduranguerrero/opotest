@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import rawData from './data/questions.json';
 import temarioRaw from './data/temario_pn.json';
+import temarioLocalRaw from './data/temario_pl.json';
 
 type Question = {
   id: string;
@@ -30,12 +31,13 @@ type QuestionStat = { answered: number; correct: number; wrong: number };
 type StatsMap = Record<string, QuestionStat>;
 
 type Mode = 'tema' | 'aleatorio' | 'simulacro' | 'repaso';
-type Screen = 'home' | 'tema' | 'test' | 'result' | 'stats';
+type Screen = 'profile' | 'home' | 'tema' | 'test' | 'result' | 'stats';
+type OppProfile = 'pn' | 'pl';
 
 const STORE_KEY = 'opo-test:v1';
 const questions = rawData.questions as Question[];
-const bloques = (temarioRaw.bloques ?? []) as Bloque[];
-const temarioTemas = bloques.flatMap((b) => b.temas);
+const bloquesPN = (temarioRaw.bloques ?? []) as Bloque[];
+const bloquesPL = (temarioLocalRaw.bloques ?? []) as Bloque[];
 
 function shuffle<T>(arr: T[]) {
   const copy = [...arr];
@@ -47,7 +49,8 @@ function shuffle<T>(arr: T[]) {
 }
 
 export default function App() {
-  const [screen, setScreen] = useState<Screen>('home');
+  const [screen, setScreen] = useState<Screen>('profile');
+  const [profile, setProfile] = useState<OppProfile>('pn');
   const [mode, setMode] = useState<Mode>('aleatorio');
   const [selectedTemaId, setSelectedTemaId] = useState<string>('');
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
@@ -58,7 +61,10 @@ export default function App() {
   const [stats, setStats] = useState<StatsMap>({});
   const [started, setStarted] = useState(false);
 
-  const temas = useMemo(() => temarioTemas, []);
+  const bloques = profile === 'pn' ? bloquesPN : bloquesPL;
+  const temas = useMemo(() => bloques.flatMap((b) => b.temas), [bloques]);
+
+  const activeQuestions = profile === 'pn' ? questions : [];
 
   const temaTitle = (temaId?: string, fallback?: string) => {
     const t = temas.find((x) => x.id === temaId);
@@ -84,11 +90,11 @@ export default function App() {
   const startTest = (m: Mode, temaId?: string) => {
     let q: Question[] = [];
 
-    if (m === 'tema') q = questions.filter((x) => x.temaId === temaId);
-    if (m === 'aleatorio') q = shuffle(questions).slice(0, 20);
-    if (m === 'simulacro') q = shuffle(questions).slice(0, 50);
+    if (m === 'tema') q = activeQuestions.filter((x) => x.temaId === temaId);
+    if (m === 'aleatorio') q = shuffle(activeQuestions).slice(0, 20);
+    if (m === 'simulacro') q = shuffle(activeQuestions).slice(0, 50);
     if (m === 'repaso') {
-      const failed = questions.filter((x) => (stats[x.id]?.wrong ?? 0) > 0);
+      const failed = activeQuestions.filter((x) => (stats[x.id]?.wrong ?? 0) > 0);
       q = shuffle(failed).slice(0, 30);
       if (!q.length) {
         Alert.alert('Repaso', 'Aún no tienes preguntas falladas. Haz tests primero.');
@@ -142,14 +148,14 @@ export default function App() {
   const totalCorrect = Object.values(stats).reduce((a, s) => a + s.correct, 0);
   const globalRate = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
-  const worstQuestions = [...questions]
+  const worstQuestions = [...activeQuestions]
     .map((q) => ({ q, wrong: stats[q.id]?.wrong ?? 0 }))
     .filter((x) => x.wrong > 0)
     .sort((a, b) => b.wrong - a.wrong)
     .slice(0, 10);
 
   const progressByTema = temas.map((t) => {
-    const qTema = questions.filter((q) => q.temaId === t.id);
+    const qTema = activeQuestions.filter((q) => q.temaId === t.id);
     const ans = qTema.reduce((a, q) => a + (stats[q.id]?.answered ?? 0), 0);
     const cor = qTema.reduce((a, q) => a + (stats[q.id]?.correct ?? 0), 0);
     return { tema: `Tema ${t.numero}`, titulo: t.titulo, rate: ans ? Math.round((cor / ans) * 100) : 0, ans };
@@ -158,6 +164,19 @@ export default function App() {
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar style="light" />
+
+      {screen === 'profile' && (
+        <View style={styles.container}>
+          <Text style={styles.title}>Selecciona oposición</Text>
+          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pn'); setScreen('home'); }}>
+            <Text style={styles.btnText}>Policía Nacional</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btn} onPress={() => { setProfile('pl'); setScreen('home'); }}>
+            <Text style={styles.btnText}>Policía Local</Text>
+          </TouchableOpacity>
+          <Text style={styles.sub}>Puedes cambiarla luego desde Inicio.</Text>
+        </View>
+      )}
 
       {screen === 'home' && (
         <ScrollView contentContainerStyle={styles.container}>
@@ -173,6 +192,11 @@ export default function App() {
           ) : (
             <>
               <Text style={styles.title}>OpoTest Policía</Text>
+              <Text style={styles.sub}>Perfil actual: {profile === 'pn' ? 'Policía Nacional' : 'Policía Local'}</Text>
+              <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen('profile')}>
+                <Text style={styles.secondaryBtnText}>Cambiar oposición</Text>
+              </TouchableOpacity>
+
               <Text style={styles.sub}>Entrena como academia: rápido, serio y enfocado en fallos.</Text>
 
               <View style={styles.card}>
@@ -181,19 +205,26 @@ export default function App() {
                 <Text style={styles.text}>Acierto global: {globalRate}%</Text>
               </View>
 
-              <TouchableOpacity style={styles.btn} onPress={() => setScreen('tema')}>
+              {activeQuestions.length === 0 && (
+                <View style={styles.card}>
+                  <Text style={styles.cardTitle}>Contenido en carga</Text>
+                  <Text style={styles.text}>Este perfil está listo en estructura de temas, falta cargar preguntas masivas.</Text>
+                </View>
+              )}
+
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => setScreen('tema')}>
                 <Text style={styles.btnText}>Test por tema</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.btn} onPress={() => startTest('aleatorio')}>
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('aleatorio')}>
                 <Text style={styles.btnText}>Test aleatorio (20)</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.btn} onPress={() => startTest('simulacro')}>
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('simulacro')}>
                 <Text style={styles.btnText}>Simulacro examen (50)</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.btn} onPress={() => startTest('repaso')}>
+              <TouchableOpacity style={styles.btn} disabled={activeQuestions.length === 0} onPress={() => startTest('repaso')}>
                 <Text style={styles.btnText}>Repaso inteligente (falladas)</Text>
               </TouchableOpacity>
 
@@ -214,7 +245,7 @@ export default function App() {
             <View key={b.id} style={styles.card}>
               <Text style={styles.cardTitle}>{b.nombre}</Text>
               {b.temas.map((t) => {
-                const count = questions.filter((q) => q.temaId === t.id).length;
+                const count = activeQuestions.filter((q) => q.temaId === t.id).length;
                 return (
                   <TouchableOpacity key={t.id} style={styles.secondaryBtn} onPress={() => startTest('tema', t.id)}>
                     <Text style={styles.secondaryBtnText}>Tema {t.numero} · {count} preguntas</Text>
