@@ -1,8 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Alert,
+  Platform,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -38,6 +40,36 @@ type OppProfile = 'pn' | 'pl';
 type UserAccount = { name: string; email: string };
 
 const STORE_KEY = 'opo-test:v2';
+
+const extra = (Constants.expoConfig?.extra ?? {}) as {
+  admobBannerId?: string;
+  admobInterstitialId?: string;
+};
+
+const isNativeAdsSupported = Platform.OS === 'ios' || Platform.OS === 'android';
+
+let BannerAdComponent: any = null;
+let BannerAdSizeValue: any = null;
+let InterstitialAdFactory: any = null;
+let AdEventTypeValue: any = null;
+let mobileAdsInit: () => Promise<unknown> = async () => Promise.resolve();
+let testBannerId = 'test-banner-web';
+let testInterstitialId = 'test-interstitial-web';
+
+if (isNativeAdsSupported) {
+  const ads = require('react-native-google-mobile-ads');
+  BannerAdComponent = ads.BannerAd;
+  BannerAdSizeValue = ads.BannerAdSize;
+  InterstitialAdFactory = ads.InterstitialAd;
+  AdEventTypeValue = ads.AdEventType;
+  mobileAdsInit = () => ads.default().initialize();
+  testBannerId = ads.TestIds.BANNER;
+  testInterstitialId = ads.TestIds.INTERSTITIAL;
+}
+
+const BANNER_AD_UNIT_ID = extra.admobBannerId || testBannerId;
+const INTERSTITIAL_AD_UNIT_ID = extra.admobInterstitialId || testInterstitialId;
+
 const questions = rawData.questions as Question[];
 const questionsPL = rawDataPL.questions as Question[];
 const bloquesPN = (temarioRaw.bloques ?? []) as Bloque[];
@@ -80,6 +112,7 @@ export default function App() {
   const [stats, setStats] = useState<StatsMap>({});
   const [account, setAccount] = useState<UserAccount>({ name: '', email: '' });
   const [started, setStarted] = useState(false);
+  const shownInterstitialRef = useRef(false);
 
   const bloques = profile === 'pn' ? bloquesPN : bloquesPL;
   const temas = useMemo(() => bloques.flatMap((b) => b.temas), [bloques]);
@@ -92,6 +125,7 @@ export default function App() {
   };
 
   useEffect(() => {
+    void mobileAdsInit();
     (async () => {
       try {
         const raw = await AsyncStorage.getItem(STORE_KEY);
@@ -225,6 +259,33 @@ export default function App() {
     return { tema: `Tema ${t.numero}`, titulo: t.titulo, rate: ans ? Math.round((cor / ans) * 100) : 0, ans };
   });
 
+  useEffect(() => {
+    if (screen !== 'result') {
+      shownInterstitialRef.current = false;
+      return;
+    }
+    if (!isNativeAdsSupported || !InterstitialAdFactory || !AdEventTypeValue) return;
+    if (shownInterstitialRef.current) return;
+    shownInterstitialRef.current = true;
+
+    const interstitial = InterstitialAdFactory.createForAdRequest(INTERSTITIAL_AD_UNIT_ID);
+    let unsubLoaded = () => {};
+    let unsubClosed = () => {};
+    let unsubErr = () => {};
+
+    const cleanup = () => {
+      unsubLoaded();
+      unsubClosed();
+      unsubErr();
+    };
+
+    unsubLoaded = interstitial.addAdEventListener(AdEventTypeValue.LOADED, () => interstitial.show());
+    unsubClosed = interstitial.addAdEventListener(AdEventTypeValue.CLOSED, cleanup);
+    unsubErr = interstitial.addAdEventListener(AdEventTypeValue.ERROR, cleanup);
+
+    interstitial.load();
+  }, [screen]);
+
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar style="dark" />
@@ -323,7 +384,13 @@ export default function App() {
                 <Text style={styles.sub}>Preparado para integrar AdMob real en siguiente fase.</Text>
               </View>
 
-              <View style={styles.banner}><Text style={styles.bannerText}>Banner anuncio (simulado)</Text></View>
+              <View style={styles.banner}>
+                {isNativeAdsSupported && BannerAdComponent && BannerAdSizeValue ? (
+                  <BannerAdComponent unitId={BANNER_AD_UNIT_ID} size={BannerAdSizeValue.ANCHORED_ADAPTIVE_BANNER} />
+                ) : (
+                  <Text style={styles.bannerText}>Banner anuncio (web: simulado)</Text>
+                )}
+              </View>
             </>
           )}
         </ScrollView>
